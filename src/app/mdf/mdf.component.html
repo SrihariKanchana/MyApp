@@ -1,0 +1,27 @@
+<div>
+<h1>MODEL DRIVEN FORM </h1> 
+ <form [formGroup] = 'loginForm' (ngSubmit) ='login()'>
+<label>Enter username: </label>
+<input type="text" formControlName="uname"/>
+<br/>
+<div *ngIf="loginForm.controls['uname'].hasError('required')" style="color: red;">
+    Username cannot be left blank.......
+</div> 
+<label>Enter password: </label>
+<input type="password" formControlName="pwd"/>
+<br/>
+<div *ngIf="loginForm.controls['pwd'].hasError('minlength')" style="color: red;">
+    minmun length should be 5.......
+</div>
+<div formGroupName="Security">
+<label>Enter Captcha: </label>
+<input type="text" formControlName="captcha"/>
+<br/>
+<label>Enter OTP: </label>
+<input type="text" formControlName="otp"/>
+<br/>
+<button>Submit</button>
+</div>
+</form>
+</div>
+

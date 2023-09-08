@@ -1,0 +1,23 @@
+<div>
+    <h1>Course Table</h1>
+    <h3>Course details are</h3>
+    <table class='table table-hover' >
+        <thead >
+            <th>ID</th>
+            <th>Name</th>
+            <th>Duration</th>
+            <th>SME</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let course of courses">
+                <td><a [routerLink]="['/course',course.cid]">{{course.cid}}</a></td>
+                <td>{{course.cname}}</td>
+                <td>{{course.cduration}}</td>
+                <td>{{course.csme}}</td>
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+<router-outlet> </router-outlet>

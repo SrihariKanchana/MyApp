@@ -1,0 +1,28 @@
+
+<div>
+<h1 appCustom>HTTP Client Demo</h1>
+<hr/>
+<button class="btn btn-success" (click)="getUsers()">Get Users</button>
+</div>
+<div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.address.stress +','+ user.address.suite+','+user.address.city +','+user.address.zipcode}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,28 @@
+<div>
+    <h1 style='text-align: center;'>Data Binding</h1>
+    <h3>Interpolation binding:</h3>
+    <h3>The Course are {{stream}} </h3>
+</div>
+<div>
+    <h3>Property Binding:</h3>
+    <h3 [align] = 'myalign'>Text is aligned to right</h3>
+   
+</div>
+<div>
+    <h3>Event Binding</h3>
+    <button class="btn btn-success" (click) = "clickMe()">Click</button>
+</div>
+<div>
+    <h3>Two Way Binding</h3>
+    Enter your name:
+    <input type="text" placeholder="enter user name" [(ngModel)]='username'/>
+    user logged in as {{username}}
+</div>
+<div>
+    <h3>ngSwitch</h3>
+    <ul [ngSwitch]="selectedvalue">
+        <li *ngSwitchCase="'one'">First</li>
+        <li *ngSwitchCase="'two'">Second</li>
+        <li *ngSwitchDefault>Third</li>
+    </ul>
+</div>

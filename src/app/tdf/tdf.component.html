@@ -1,0 +1,19 @@
+<div style="text-align: center; border: 3px solid black; width:auto; " >
+    <h1>Template Driven Form</h1>
+    <form #LoginForm='ngForm' (ngSubmit)="login(LoginForm.value)">
+        <label>Enter Your User Name:</label>
+        <input type="text" name='username' #uname='ngModel' required ngModel/>
+        <br/>
+        <div [hidden]="uname.valid ||uname.touched" style="color:red">User Cann't be left blank</div>
+        <label>Enter Password:</label>
+        <input type="password" name='password' #pwd='ngModel' required ngModel/>
+        <div [hidden]="pwd.valid ||pwd.touched" style="color:red">password Cann't be left blank</div>
+        <div ngModelGroup="Security">
+            <label>Enter Captcha</label>
+            <input type="text" name="captcha" ngModel/><br/>
+            <label>Enter OTP</label>
+            <input type="text" name='otp' ngModel/><br/>
+        </div>
+        <button>Submit</button>
+    </form>
+</div>
